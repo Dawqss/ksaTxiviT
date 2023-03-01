@@ -1,4 +1,5 @@
 /**
+ *
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
@@ -7,7 +8,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -17,7 +17,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
 import {
   Colors,
   DebugInstructions,
