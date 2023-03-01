@@ -1,5 +1,6 @@
-import {View} from 'react-native';
+import React from 'react';
+import {StyledFigureCarouselContainer} from './styles';
 
 export const FigureCarouselScreen = () => {
-  return <View></View>;
+  return <StyledFigureCarouselContainer></StyledFigureCarouselContainer>;
 };

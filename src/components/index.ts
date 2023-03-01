@@ -1,1 +1,1 @@
-export * from './TestComponent';
+export * from './Providers/Providers';
