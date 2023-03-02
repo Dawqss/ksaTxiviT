@@ -1,5 +1,7 @@
 import React, {useCallback} from 'react';
-import {StyledContainer} from './styles';
+import {useSelector} from 'react-redux';
+import {getFigureById} from 'store';
+import {StyledContainer, StyledImage} from './styles';
 
 export interface FigureCarouselItemProps {
   isFirst: boolean;
@@ -16,15 +18,22 @@ export const FigureCarouselItem = ({
   isSelected,
   id,
 }: FigureCarouselItemProps) => {
+  const item = useSelector(getFigureById(id));
   const handlePress = useCallback(() => {
     onPress(id);
   }, [id]);
+
+  console.log(id);
+
+  console.log(item);
 
   return (
     <StyledContainer
       isFirst={isFirst}
       isLast={isLast}
       isSelected={isSelected}
-      onPress={handlePress}></StyledContainer>
+      onPress={handlePress}>
+      <StyledImage />
+    </StyledContainer>
   );
 };

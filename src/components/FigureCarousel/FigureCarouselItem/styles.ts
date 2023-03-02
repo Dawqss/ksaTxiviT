@@ -37,3 +37,8 @@ export const StyledContainer = styled.TouchableOpacity<{
         `
       : ''};
 `;
+
+export const StyledImage = styled.Image`
+  height: 60%;
+  width: auto;
+`;

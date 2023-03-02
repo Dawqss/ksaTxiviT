@@ -1,10 +1,10 @@
-import {FigureCarouselItem} from 'components/FigureCarousel/FigureCarouselItem/FigureCarouselItem';
 import sampleSize from 'lodash.samplesize';
 import React, {useMemo} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import {useSelector} from 'react-redux';
 import {getAllFiguresIds} from 'store';
-import {createOffsetsPointsForFigureCarousel} from 'utils/createOffsetsPointsForFigureCarousel';
+import {createOffsetsPointsForFigureCarousel} from 'utils';
+import {FigureCarouselItem} from './FigureCarouselItem/FigureCarouselItem';
 
 export interface FigureCarouselProps {
   carouselSize: number;

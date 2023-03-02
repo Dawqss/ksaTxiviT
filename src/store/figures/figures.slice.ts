@@ -33,7 +33,7 @@ const slice = createSlice({
 
           return {
             ...state,
-            ...byId,
+            byId,
             allIds,
           };
         },
