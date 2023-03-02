@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {FigureCarouselScreen} from 'screens';
+import {FigureCarouselScreen, WebViewScreen} from 'screens';
 import {mainScreenOptions, MainStack, Routes} from '../constants';
 
 export const MainNavigator = () => {
@@ -12,6 +12,11 @@ export const MainNavigator = () => {
         <MainStack.Screen
           name={Routes.FigureCarousel}
           component={FigureCarouselScreen}
+        />
+        <MainStack.Screen
+          name={Routes.WebView}
+          component={WebViewScreen}
+          options={{}}
         />
       </MainStack.Navigator>
     </NavigationContainer>

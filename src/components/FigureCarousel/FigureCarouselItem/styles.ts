@@ -44,7 +44,7 @@ export const StyledImageWithPlaceholder = styled(ImageWithPlaceholder)`
 
 export const StyledName = styled(StyledText)`
   color: ${props => props.theme.baseColors.darkBlue};
-  padding: 8px 10px;
+  padding: 4px 10px;
   font-size: 13px;
   text-align: center;
 `;
@@ -52,6 +52,6 @@ export const StyledName = styled(StyledText)`
 export const StyledLinkShowDetails = styled(StyledText)`
   color: ${props => props.theme.baseColors.orange};
   font-size: 13px;
-  padding: 8px 10px;
+  padding: 4px 10px;
   text-align: center;
 `;

@@ -1,6 +1,10 @@
+import {NavigationProp} from '@react-navigation/core/src/types';
+import {useNavigation} from '@react-navigation/native';
+import {Routes} from 'navigation';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
-import {getFigureById, setUrlAction, useAppDispatch} from 'store';
+import {getFigureById} from 'store';
+import {MainStackParams} from 'types';
 import {
   StyledImageWithPlaceholder,
   StyledContainer,
@@ -23,14 +27,14 @@ export const FigureCarouselItem = ({
   isSelected,
   id,
 }: FigureCarouselItemProps) => {
-  const dispatch = useAppDispatch();
+  const {navigate} = useNavigation<NavigationProp<MainStackParams>>();
   const {set_img_url, name, set_url} = useSelector(getFigureById(id));
   const handlePress = useCallback(() => {
     onPress(id);
   }, [id]);
 
   const onShowDetailsPress = useCallback(() => {
-    dispatch(setUrlAction(set_url));
+    navigate(Routes.WebView, {uri: set_url});
   }, [set_url]);
 
   return (
