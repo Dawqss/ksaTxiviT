@@ -12,15 +12,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-tivixTask-tivixTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-tivixTask-tivixTaskTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A68DA4CA200046BF996B959C /* Changa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5606E9808814485BBAABC6C1 /* Changa-Bold.ttf */; };
-		DC61D14FF47040E7A6F7D23F /* Changa-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0872A8285A254CE582692AE7 /* Changa-ExtraBold.ttf */; };
-		88200F6C06A14E6BB4A82757 /* Changa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75383D64B92A455D9E086D46 /* Changa-ExtraLight.ttf */; };
-		A1F2DFD0582C4E2B8C4B58C4 /* Changa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1657A38E54548D0AD0ECF92 /* Changa-Light.ttf */; };
-		CDE5DC055C964EA98EF74707 /* Changa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 315E08A1762E47E4869DC554 /* Changa-Medium.ttf */; };
 		1FE00AAF30CC4DD78BC99F2B /* Changa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01DF5A92B1B544558C18ADDB /* Changa-Regular.ttf */; };
 		596117780DD840FFB79E7D5D /* Changa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F74EE10AA964B4BA059D883 /* Changa-SemiBold.ttf */; };
+		7699B88040F8A987B510C191 /* libPods-tivixTask-tivixTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-tivixTask-tivixTaskTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		88200F6C06A14E6BB4A82757 /* Changa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75383D64B92A455D9E086D46 /* Changa-ExtraLight.ttf */; };
+		A1F2DFD0582C4E2B8C4B58C4 /* Changa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1657A38E54548D0AD0ECF92 /* Changa-Light.ttf */; };
+		A68DA4CA200046BF996B959C /* Changa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5606E9808814485BBAABC6C1 /* Changa-Bold.ttf */; };
+		CDE5DC055C964EA98EF74707 /* Changa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 315E08A1762E47E4869DC554 /* Changa-Medium.ttf */; };
+		DC61D14FF47040E7A6F7D23F /* Changa-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0872A8285A254CE582692AE7 /* Changa-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,8 @@
 		00E356EE1AD99517003FC87E /* tivixTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tivixTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* tivixTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tivixTaskTests.m; sourceTree = "<group>"; };
+		01DF5A92B1B544558C18ADDB /* Changa-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-Regular.ttf"; path = "../assets/fonts/Changa-Regular.ttf"; sourceTree = "<group>"; };
+		0872A8285A254CE582692AE7 /* Changa-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-ExtraBold.ttf"; path = "../assets/fonts/Changa-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* tivixTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tivixTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = tivixTask/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = tivixTask/AppDelegate.mm; sourceTree = "<group>"; };
@@ -44,20 +46,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tivixTask/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = tivixTask/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-tivixTask-tivixTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tivixTask-tivixTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		315E08A1762E47E4869DC554 /* Changa-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-Medium.ttf"; path = "../assets/fonts/Changa-Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-tivixTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tivixTask.debug.xcconfig"; path = "Target Support Files/Pods-tivixTask/Pods-tivixTask.debug.xcconfig"; sourceTree = "<group>"; };
+		5606E9808814485BBAABC6C1 /* Changa-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-Bold.ttf"; path = "../assets/fonts/Changa-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-tivixTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tivixTask.release.xcconfig"; path = "Target Support Files/Pods-tivixTask/Pods-tivixTask.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-tivixTask-tivixTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tivixTask-tivixTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-tivixTask-tivixTaskTests/Pods-tivixTask-tivixTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-tivixTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tivixTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F74EE10AA964B4BA059D883 /* Changa-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-SemiBold.ttf"; path = "../assets/fonts/Changa-SemiBold.ttf"; sourceTree = "<group>"; };
+		75383D64B92A455D9E086D46 /* Changa-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-ExtraLight.ttf"; path = "../assets/fonts/Changa-ExtraLight.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tivixTask/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-tivixTask-tivixTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tivixTask-tivixTaskTests.release.xcconfig"; path = "Target Support Files/Pods-tivixTask-tivixTaskTests/Pods-tivixTask-tivixTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1657A38E54548D0AD0ECF92 /* Changa-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Changa-Light.ttf"; path = "../assets/fonts/Changa-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		5606E9808814485BBAABC6C1 /* Changa-Bold.ttf */ = {isa = PBXFileReference; name = "Changa-Bold.ttf"; path = "../assets/fonts/Changa-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0872A8285A254CE582692AE7 /* Changa-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Changa-ExtraBold.ttf"; path = "../assets/fonts/Changa-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		75383D64B92A455D9E086D46 /* Changa-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Changa-ExtraLight.ttf"; path = "../assets/fonts/Changa-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A1657A38E54548D0AD0ECF92 /* Changa-Light.ttf */ = {isa = PBXFileReference; name = "Changa-Light.ttf"; path = "../assets/fonts/Changa-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		315E08A1762E47E4869DC554 /* Changa-Medium.ttf */ = {isa = PBXFileReference; name = "Changa-Medium.ttf"; path = "../assets/fonts/Changa-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		01DF5A92B1B544558C18ADDB /* Changa-Regular.ttf */ = {isa = PBXFileReference; name = "Changa-Regular.ttf"; path = "../assets/fonts/Changa-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5F74EE10AA964B4BA059D883 /* Changa-SemiBold.ttf */ = {isa = PBXFileReference; name = "Changa-SemiBold.ttf"; path = "../assets/fonts/Changa-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,19 +152,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-tivixTask.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-tivixTask.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-tivixTask-tivixTaskTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-tivixTask-tivixTaskTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		88153D3B9ACB42859BD380C2 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				5606E9808814485BBAABC6C1 /* Changa-Bold.ttf */,
 				0872A8285A254CE582692AE7 /* Changa-ExtraBold.ttf */,
@@ -175,8 +164,19 @@
 				5F74EE10AA964B4BA059D883 /* Changa-SemiBold.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-tivixTask.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-tivixTask.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-tivixTask-tivixTaskTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-tivixTask-tivixTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
