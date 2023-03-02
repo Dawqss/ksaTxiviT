@@ -2,7 +2,7 @@ import {Routes} from 'navigation';
 import React from 'react';
 import {NativeStackScreenProps} from 'react-native-screens/native-stack';
 import {MainStackParams} from 'types';
-import {StyledContainer, StyledWebView} from './styles';
+import {StyledWebView} from './styles';
 
 type WebViewScreenNavigationProp = NativeStackScreenProps<
   MainStackParams,
@@ -14,9 +14,5 @@ export const WebViewScreen = ({
     params: {uri},
   },
 }: WebViewScreenNavigationProp) => {
-  return (
-    <StyledContainer>
-      <StyledWebView source={{uri}} />
-    </StyledContainer>
-  );
+  return <StyledWebView source={{uri}} />;
 };
