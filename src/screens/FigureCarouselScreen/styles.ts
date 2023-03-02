@@ -1,7 +1,8 @@
+import {StyledText} from 'components';
 import {
   FIGURE_CAROUSEL_ITEM_MARGIN,
   FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX,
-} from 'components';
+} from 'constants/figureCarousel';
 import {styled} from 'utils';
 
 export const StyledContainer = styled.View`
@@ -9,8 +10,7 @@ export const StyledContainer = styled.View`
   background-color: ${props => props.theme.palette.background.main};
 `;
 
-export const StyledHeader = styled.Text`
-  font-family: 'Changa-Regular';
+export const StyledHeader = styled(StyledText)`
   font-weight: 800;
   color: ${props => props.theme.baseColors.white};
   font-size: 25px;

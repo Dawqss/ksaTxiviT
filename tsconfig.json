@@ -46,10 +46,11 @@
       "tests": ["__tests__/*"],
       "@components/*": ["src/components/*"],
       "@navigation/*": ["src/navigation/*"],
-      "@screens/*": ["src/screens"],
-      "@store/*": ["src/store"],
-      "@types/*": ["src/types"],
-      "@utils/*": ["src/utils"]
+      "@screens/*": ["src/screens/*"],
+      "@store/*": ["src/store/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"],
+      "@constants/*": ["src/constants/*"]
     },
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     "typeRoots": [

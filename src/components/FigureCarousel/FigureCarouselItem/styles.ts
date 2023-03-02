@@ -1,13 +1,10 @@
-import {Dimensions} from 'react-native';
+import {ImageWithPlaceholder, StyledText} from 'components';
+import {
+  FIGURE_CAROUSEL_GAP_TO_FILL_WIDTH_IN_PX,
+  FIGURE_CAROUSEL_ITEM_MARGIN,
+  FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX,
+} from 'constants/figureCarousel';
 import {css, styled} from 'utils';
-
-export const FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX =
-  Dimensions.get('window').width * 0.7;
-
-export const FIGURE_CAROUSEL_ITEM_MARGIN = 20;
-
-export const FIGURE_CAROUSEL_GAP_TO_FILL_WIDTH_IN_PX =
-  (Dimensions.get('window').width - FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX) / 2;
 
 export const StyledContainer = styled.TouchableOpacity<{
   isFirst: boolean;
@@ -17,6 +14,10 @@ export const StyledContainer = styled.TouchableOpacity<{
   width: ${FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX}px;
   height: ${FIGURE_CAROUSEL_ITEM_SIDE_WIDTH_IN_PX}px;
   border-radius: 20px;
+  align-self: center;
+  overflow: visible;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
   background-color: ${props => props.theme.palette.background.card};
   margin-left: ${props =>
     props.isFirst
@@ -26,9 +27,6 @@ export const StyledContainer = styled.TouchableOpacity<{
     props.isLast
       ? FIGURE_CAROUSEL_GAP_TO_FILL_WIDTH_IN_PX
       : FIGURE_CAROUSEL_ITEM_MARGIN}px;
-  align-self: center;
-  overflow: visible;
-
   ${props =>
     props.isSelected
       ? css`
@@ -38,7 +36,22 @@ export const StyledContainer = styled.TouchableOpacity<{
       : ''};
 `;
 
-export const StyledImage = styled.Image`
-  height: 60%;
+export const StyledImageWithPlaceholder = styled(ImageWithPlaceholder)`
+  margin-top: 20px;
   width: auto;
+  height: 60%;
+`;
+
+export const StyledName = styled(StyledText)`
+  color: ${props => props.theme.baseColors.darkBlue};
+  padding: 8px 10px;
+  font-size: 13px;
+  text-align: center;
+`;
+
+export const StyledLinkShowDetails = styled(StyledText)`
+  color: ${props => props.theme.baseColors.orange};
+  font-size: 13px;
+  padding: 8px 10px;
+  text-align: center;
 `;

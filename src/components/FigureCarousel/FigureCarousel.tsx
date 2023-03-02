@@ -25,6 +25,7 @@ export const FigureCarousel = ({
 
   return (
     <ScrollView
+      snapToAlignment="center"
       horizontal
       decelerationRate="fast"
       snapToOffsets={createOffsetsPointsForFigureCarousel(randomFigureIds)}

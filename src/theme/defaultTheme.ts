@@ -9,7 +9,7 @@ export const darkTheme: DefaultTheme = {
   palette: {
     background: {
       main: '#1f2138',
-      card: '#F9F6EE',
+      card: '#ffffff',
     },
     button: {
       background: '#008ef4',
@@ -21,10 +21,10 @@ export const darkTheme: DefaultTheme = {
   },
 };
 
-export const lightTheme: DefaultTheme = {
-  palette: {
-    background: '#F9F6EE',
-  },
-};
+// export const lightTheme: DefaultTheme = {
+//   palette: {
+//     background: '#F9F6EE',
+//   },
+// };
 
 export const defaultTheme = darkTheme;

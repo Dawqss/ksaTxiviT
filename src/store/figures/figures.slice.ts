@@ -10,7 +10,7 @@ const initialState: FiguresSlice = {
 };
 
 const slice = createSlice({
-  name: 'clubAbout',
+  name: 'figures',
   initialState,
   reducers: {},
   extraReducers: builder => {

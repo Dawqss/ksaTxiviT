@@ -1,7 +1,12 @@
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
-import {getFigureById} from 'store';
-import {StyledContainer, StyledImage} from './styles';
+import {getFigureById, setUrlAction, useAppDispatch} from 'store';
+import {
+  StyledImageWithPlaceholder,
+  StyledContainer,
+  StyledName,
+  StyledLinkShowDetails,
+} from './styles';
 
 export interface FigureCarouselItemProps {
   isFirst: boolean;
@@ -18,14 +23,15 @@ export const FigureCarouselItem = ({
   isSelected,
   id,
 }: FigureCarouselItemProps) => {
-  const item = useSelector(getFigureById(id));
+  const dispatch = useAppDispatch();
+  const {set_img_url, name, set_url} = useSelector(getFigureById(id));
   const handlePress = useCallback(() => {
     onPress(id);
   }, [id]);
 
-  console.log(id);
-
-  console.log(item);
+  const onShowDetailsPress = useCallback(() => {
+    dispatch(setUrlAction(set_url));
+  }, [set_url]);
 
   return (
     <StyledContainer
@@ -33,7 +39,11 @@ export const FigureCarouselItem = ({
       isLast={isLast}
       isSelected={isSelected}
       onPress={handlePress}>
-      <StyledImage />
+      <StyledImageWithPlaceholder uri={set_img_url} resizeMode="contain" />
+      <StyledName>{name}</StyledName>
+      <StyledLinkShowDetails onPress={onShowDetailsPress}>
+        Show Details
+      </StyledLinkShowDetails>
     </StyledContainer>
   );
 };
