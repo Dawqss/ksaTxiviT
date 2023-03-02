@@ -8,7 +8,6 @@ export const fetchHarryPotterMiniFigs = createAsyncThunk<LegoMiniFigsResponse>(
     try {
       return await BrickApi.getHarryPotterMiniFigs();
     } catch (error) {
-      console.log('error', error);
       return rejectWithValue(error);
     }
   },

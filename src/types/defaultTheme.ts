@@ -5,7 +5,10 @@ export interface DefaultTheme {
     white: string;
   };
   palette: {
-    background: string;
+    background: {
+      main: string;
+      card: string;
+    };
     button: {
       background: string;
       label: string;

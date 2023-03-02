@@ -4,9 +4,13 @@ export const darkTheme: DefaultTheme = {
   baseColors: {
     orange: '#ff8902',
     darkBlue: '#1f2138',
+    white: '#ffffff',
   },
   palette: {
-    background: '#1f2138',
+    background: {
+      main: '#1f2138',
+      card: '#F9F6EE',
+    },
     button: {
       background: '#008ef4',
       label: '#ffffff',
