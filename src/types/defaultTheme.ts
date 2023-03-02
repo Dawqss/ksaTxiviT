@@ -3,6 +3,7 @@ export interface DefaultTheme {
     orange: string;
     darkBlue: string;
     white: string;
+    grey: string;
   };
   palette: {
     background: {

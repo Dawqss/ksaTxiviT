@@ -1,6 +1,5 @@
 import {FigureCarousel} from 'components/FigureCarousel/FigureCarousel';
 import React, {useCallback, useEffect, useState} from 'react';
-import {Button} from 'react-native';
 import {fetchHarryPotterMiniFigs, useAppDispatch} from 'store';
 import {
   StyledContainer,
@@ -8,6 +7,7 @@ import {
   StyledHeader,
   StyledButtonWrapper,
   StyledHeaderWrapper,
+  StyledButton,
 } from './styles';
 
 const CAROUSEL_SIZE = 5;
@@ -24,6 +24,10 @@ export const FigureCarouselScreen = () => {
     setSelectedFigureId(id);
   }, []);
 
+  const onChooseFigurePress = useCallback(() => {
+    console.log(selectedFigureId);
+  }, [selectedFigureId]);
+
   return (
     <StyledContainer>
       <StyledHeaderWrapper>
@@ -37,7 +41,11 @@ export const FigureCarouselScreen = () => {
         />
       </StyledFigureCarouselWrapper>
       <StyledButtonWrapper>
-        <Button title="HALLO" onPress={() => {}} />
+        <StyledButton
+          label="Choose figure"
+          onPress={onChooseFigurePress}
+          isDisabled={!selectedFigureId}
+        />
       </StyledButtonWrapper>
     </StyledContainer>
   );
