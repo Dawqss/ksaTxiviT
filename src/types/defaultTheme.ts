@@ -2,6 +2,7 @@ export interface DefaultTheme {
   baseColors: {
     orange: string;
     darkBlue: string;
+    white: string;
   };
   palette: {
     background: string;

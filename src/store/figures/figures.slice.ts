@@ -1,15 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
+import {FiguresSlice} from 'types';
+import {fetchHarryPotterMiniFigs} from '../figures/figures.thunks';
 
-export interface t1 {
-  allIds: string[];
-  byId: unknown;
-  error: unknown;
-}
-
-const initialState: t1 = {
+const initialState: FiguresSlice = {
   allIds: [],
   byId: {},
   error: null,
+  isLoading: false,
 };
 
 const slice = createSlice({
@@ -17,49 +14,35 @@ const slice = createSlice({
   initialState,
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(fetchClubTrophiesAndVenue.pending, state => ({
-      ...state,
-      isClubAboutLoading: true,
-      error: null,
-    }));
-    builder.addCase(
-      fetchClubTrophiesAndVenue.fulfilled,
-      (
-        state,
-        {
-          payload: {
-            trophies: {data: clubTrophiesData},
-            venue: {data: clubVenueData},
-          },
-          meta: {arg: teamId},
+    builder
+      .addCase(fetchHarryPotterMiniFigs.pending, state => ({
+        ...state,
+        error: null,
+        isLoading: true,
+      }))
+      .addCase(
+        fetchHarryPotterMiniFigs.fulfilled,
+        (state, {payload: {results}}) => {
+          const allIds = results.map(({set_num}) => set_num);
+          const byId = results.reduce((previousValue, currentValue) => {
+            return {
+              ...previousValue,
+              [currentValue.set_num]: currentValue,
+            };
+          }, {});
+
+          return {
+            ...state,
+            ...byId,
+            allIds,
+          };
         },
-      ) => {
-        return {
-          ...state,
-          byId: {
-            ...state.byId,
-            [teamId]: {
-              trophies: clubTrophiesData
-                .filter(({status}) => status === 'Winner')
-                .map(clubTrophy => ({
-                  ...clubTrophy,
-                  seasons: getAllTrophySeasons({
-                    seasons: clubTrophy.seasons.data,
-                    nonSportsMonkSeasons: clubTrophy.non_sportmonk_seasons,
-                  }),
-                })),
-              venue: clubVenueData,
-            },
-          },
-          isClubAboutLoading: false,
-        };
-      },
-    );
-    builder.addCase(fetchClubTrophiesAndVenue.rejected, (state, {error}) => ({
-      ...state,
-      isClubAboutLoading: false,
-      error,
-    }));
+      )
+      .addCase(fetchHarryPotterMiniFigs.rejected, (state, {error}) => ({
+        ...state,
+        isLoading: false,
+        error,
+      }));
   },
 });
 

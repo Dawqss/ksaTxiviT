@@ -1,3 +1,3 @@
 export const endpoints = {
-  harryPotterMiniFigs: '/minifigs/harry-potter/',
+  minifigs: '/lego/minifigs/',
 };
