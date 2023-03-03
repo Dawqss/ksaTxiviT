@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "server": "json-server --watch dbFake.json",
     "test": "jest --env=jsdom --updateSnapshot --silent",
     "test:clear": "jest --clearCache",
     "test:coverage": "yarn test --coverage",
