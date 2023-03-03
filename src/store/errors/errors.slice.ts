@@ -1,12 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {omit} from 'lodash';
-import {CommonError} from 'types';
+import {CommonError, ErrorsReducerState} from 'types';
 import {mergeRejectedError} from './helpers';
-
-export interface ErrorsReducerState {
-  errorsById: Record<string, CommonError>;
-  errorIds: string[];
-}
 
 const initialState: ErrorsReducerState = {
   errorsById: {},

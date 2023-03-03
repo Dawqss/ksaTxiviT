@@ -5,7 +5,6 @@ import {fetchHarryPotterMiniFigs} from '../figures/figures.thunks';
 const initialState: FiguresSlice = {
   allIds: [],
   byId: {},
-  error: null,
   isLoading: false,
 };
 
@@ -17,7 +16,6 @@ const slice = createSlice({
     builder
       .addCase(fetchHarryPotterMiniFigs.pending, state => ({
         ...state,
-        error: null,
         isLoading: true,
       }))
       .addCase(
@@ -38,10 +36,9 @@ const slice = createSlice({
           };
         },
       )
-      .addCase(fetchHarryPotterMiniFigs.rejected, (state, {error}) => ({
+      .addCase(fetchHarryPotterMiniFigs.rejected, state => ({
         ...state,
         isLoading: false,
-        error,
       }));
   },
 });

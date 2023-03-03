@@ -1,12 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {fetchPartsByFigureId} from 'store/figureParts/figureParts.thunks';
-import {FigurePart} from 'types';
-
-export interface FigurePartsSlice {
-  allIds: string[];
-  byId: Record<string, FigurePart>;
-  isLoading: boolean;
-}
+import {FigurePartsSlice} from 'types';
 
 const initialState: FigurePartsSlice = {
   allIds: [],
