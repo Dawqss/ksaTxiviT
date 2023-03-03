@@ -6,7 +6,7 @@ export const darkTheme: DefaultTheme = {
     darkBlue: '#1f2138',
     white: '#ffffff',
     grey: '#d3d3d3',
-    red: '#7A0012',
+    red: '#ff726f',
   },
   palette: {
     background: {
@@ -22,11 +22,5 @@ export const darkTheme: DefaultTheme = {
     },
   },
 };
-
-// export const lightTheme: DefaultTheme = {
-//   palette: {
-//     background: '#F9F6EE',
-//   },
-// };
 
 export const defaultTheme = darkTheme;
