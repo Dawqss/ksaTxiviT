@@ -1,11 +1,18 @@
+import {ApiErrorKeys} from 'api';
+import {SummaryApi} from 'api/SummaryApi/SummaryApi';
 import {PartsList, CloseButton, Button} from 'components';
 import {Routes} from 'navigation';
 import React, {useCallback, useEffect} from 'react';
 import {NativeStackScreenProps} from 'react-native-screens/native-stack';
 import {useSelector} from 'react-redux';
-import {getFigureById, useAppDispatch, fetchPartsByFigureId} from 'store';
-import {MainStackParams} from 'types';
-import {shortName} from 'utils';
+import {
+  getFigureById,
+  useAppDispatch,
+  fetchPartsByFigureId,
+  addNewErrorToStack,
+} from 'store';
+import {ErrorResponse, MainStackParams} from 'types';
+import {createCommonError, shortName} from 'utils';
 import {
   StyledContainer,
   StyledWrapper,
@@ -26,7 +33,7 @@ export type SummaryScreenProp = NativeStackScreenProps<
 export const SummaryScreen = ({
   navigation,
   route: {
-    params: {figureId},
+    params: {figureId, shippingForm},
   },
 }: SummaryScreenProp) => {
   const dispatch = useAppDispatch();
@@ -43,7 +50,27 @@ export const SummaryScreen = ({
     navigation.goBack();
   }, []);
 
-  const onSubmitButtonPress = useCallback(() => {}, []);
+  const onSubmitButtonPress = useCallback(async () => {
+    try {
+      await SummaryApi.postSummary({
+        figureId,
+        shippingForm,
+      });
+
+      navigation.reset({
+        routes: [{name: Routes.FigureCarousel}],
+      });
+    } catch (error) {
+      dispatch(
+        addNewErrorToStack(
+          createCommonError(
+            error as ErrorResponse,
+            ApiErrorKeys.FetchPartsByFigureId,
+          ),
+        ),
+      );
+    }
+  }, [figureId, shippingForm]);
 
   return (
     <StyledContainer>

@@ -6,6 +6,10 @@ export const httpClient = axios.create({
   baseURL: Config.API_URL,
 });
 
+export const httpClientFakeServer = axios.create({
+  baseURL: Config.FAKE_API_URL,
+});
+
 httpClient.interceptors.request.use(config => {
   const token = Config.BRICKABLE_API_KEY;
   if (token) {

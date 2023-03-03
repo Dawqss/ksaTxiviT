@@ -7,7 +7,7 @@ export const StyledContainer = styled.SafeAreaView`
 `;
 
 export const StyledWrapper = styled.ScrollView.attrs(() => ({
-  contentContainerStyle: {flex: 1},
+  contentContainerStyle: {},
 }))`
   border-radius: 8px;
   background-color: ${props => props.theme.palette.background.card};
@@ -54,9 +54,9 @@ export const StyledPartsWrapper = styled.View`
 `;
 
 export const StyledSubmitButtonWrapper = styled.View`
+  min-height: 60px;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 auto;
   padding-bottom: 30px;
 `;
