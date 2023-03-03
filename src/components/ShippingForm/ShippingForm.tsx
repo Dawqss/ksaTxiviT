@@ -28,8 +28,6 @@ export const ShippingForm = ({onHandleSubmit}: ShippingFormProps) => {
     },
   });
 
-  console.log(isValid);
-
   return (
     <StyledContainer>
       <ControlledTextInput

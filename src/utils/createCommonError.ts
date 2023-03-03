@@ -5,7 +5,6 @@ export const createCommonError = (
   error: ErrorResponse,
   actionKey?: ApiErrorKeys,
 ): CommonError => {
-  console.log('DO I EVER RUN', error);
   return {
     type: 'error',
     status: error.message.response?.status.toString() ?? 'unknown',
