@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
-import {BrickApi} from 'api/BrickApi';
+import {BrickApi} from 'api/BricksApi/BrickApi';
 import {LegoMiniFigsResponse} from 'types';
 
 export const fetchHarryPotterMiniFigs = createAsyncThunk<LegoMiniFigsResponse>(
