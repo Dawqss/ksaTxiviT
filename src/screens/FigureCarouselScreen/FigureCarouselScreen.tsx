@@ -59,6 +59,7 @@ export const FigureCarouselScreen = ({
           label="Choose figure"
           onPress={onChooseFigurePress}
           isDisabled={!selectedFigureId}
+          disabled={!selectedFigureId}
         />
       </StyledButtonWrapper>
     </StyledContainer>
