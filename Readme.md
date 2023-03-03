@@ -23,3 +23,4 @@ to install this project you need:
 - add more unit tests
 - add e2e tests
 - add splashScreen
+- .env can be fetched from secure provider
