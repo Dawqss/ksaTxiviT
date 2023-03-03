@@ -10,8 +10,16 @@ to install this project you need:
 - cd ios && pod install
 - npm install -g json-server
 
-## Run
+### Run
 - run "npm run server" in terminal and leave working process 
 - run xCode preferably
 - choose tivixTask1 schema
 - run app on simulator
+
+- you can run one existing test by "yarn run test"
+
+
+### Next enhance to make 
+- add more unit tests
+- add e2e tests
+- add splashScreen
