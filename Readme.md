@@ -1,5 +1,6 @@
 ### Environment
 to install this project you need:
+- working RN env
 - node >= lts/gallium
 - ruby 2.7.5
 - preinstalled json-server
@@ -23,4 +24,4 @@ to install this project you need:
 - add more unit tests
 - add e2e tests
 - add splashScreen
-- .env can be fetched from secure provider
+- .env can be fetched from secure provider (.env shouldn't be in repo)
