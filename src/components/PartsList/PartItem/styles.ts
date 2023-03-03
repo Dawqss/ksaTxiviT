@@ -23,6 +23,7 @@ export const StyledImage = styled.Image`
 export const StyledRow = styled.View`
   flex-direction: row;
 `;
+
 export const StyledLabelWrapper = styled.View`
   flex: 1;
 `;

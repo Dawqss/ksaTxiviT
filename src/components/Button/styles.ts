@@ -11,6 +11,7 @@ export const StyledTouchableOpacity = styled(TouchableOpacity)<{
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
+  min-width: 150px;
 `;
 
 export const StyledLabel = styled(StyledText)`

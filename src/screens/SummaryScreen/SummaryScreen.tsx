@@ -1,4 +1,4 @@
-import {PartsList, CloseButton} from 'components';
+import {PartsList, CloseButton, Button} from 'components';
 import {Routes} from 'navigation';
 import React, {useCallback, useEffect} from 'react';
 import {NativeStackScreenProps} from 'react-native-screens/native-stack';
@@ -15,6 +15,7 @@ import {
   StyledFigureWrapper,
   StyledName,
   StyledPartsWrapper,
+  StyledSubmitButtonWrapper,
 } from './styles';
 
 export type SummaryScreenProp = NativeStackScreenProps<
@@ -42,6 +43,8 @@ export const SummaryScreen = ({
     navigation.goBack();
   }, []);
 
+  const onSubmitButtonPress = useCallback(() => {}, []);
+
   return (
     <StyledContainer>
       <StyledWrapper>
@@ -56,6 +59,13 @@ export const SummaryScreen = ({
         <StyledPartsWrapper>
           <PartsList />
         </StyledPartsWrapper>
+        <StyledSubmitButtonWrapper>
+          <Button
+            label="SUBMIT"
+            onPress={onSubmitButtonPress}
+            isDisabled={false}
+          />
+        </StyledSubmitButtonWrapper>
       </StyledWrapper>
     </StyledContainer>
   );

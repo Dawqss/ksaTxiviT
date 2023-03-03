@@ -39,6 +39,7 @@ const slice = createSlice({
             ...state,
             allIds,
             byId,
+            isLoading: false,
           };
         },
       )
