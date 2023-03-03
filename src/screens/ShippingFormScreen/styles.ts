@@ -16,6 +16,6 @@ export const StyledHeader = styled(StyledText)`
   text-align: center;
 `;
 
-export const StyledScrollView = styled.ScrollView.attrs(() => ({
-  contentContainerStyle: {flex: 1},
-}))``;
+export const StyledScrollView = styled.ScrollView`
+  padding-bottom: 15px;
+`;
