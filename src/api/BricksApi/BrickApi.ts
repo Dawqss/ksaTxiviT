@@ -13,4 +13,8 @@ export class BrickApi {
       },
     });
   }
+
+  static getPartsForMiniFigure(figureId: string) {
+    return httpClient.get(endpoints.partsForMinifig(figureId));
+  }
 }

@@ -5,7 +5,7 @@ import {NativeStackScreenProps} from 'react-native-screens/native-stack';
 import {ShippingForm as ShippingFormType, MainStackParams} from 'types';
 import {StyledContainer, StyledHeader, StyledScrollView} from './styles';
 
-export type ShippingFormScreenNavigationProp = NativeStackScreenProps<
+export type ShippingFormScreenProp = NativeStackScreenProps<
   MainStackParams,
   Routes.ShippingForm
 >;
@@ -15,7 +15,7 @@ export const ShippingFormScreen = ({
   route: {
     params: {figureId},
   },
-}: ShippingFormScreenNavigationProp) => {
+}: ShippingFormScreenProp) => {
   const handleSubmit = useCallback(
     (shippingForm: ShippingFormType) => {
       navigate(Routes.SummaryScreen, {shippingForm, figureId});
