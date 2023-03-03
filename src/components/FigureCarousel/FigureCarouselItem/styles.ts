@@ -27,6 +27,7 @@ export const StyledContainer = styled.TouchableOpacity<{
     props.isLast
       ? FIGURE_CAROUSEL_GAP_TO_FILL_WIDTH_IN_PX
       : FIGURE_CAROUSEL_ITEM_MARGIN}px;
+  border: 1px solid transparent;
   ${props =>
     props.isSelected
       ? css`

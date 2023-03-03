@@ -4,6 +4,7 @@ export interface DefaultTheme {
     darkBlue: string;
     white: string;
     grey: string;
+    red: string;
   };
   palette: {
     background: {

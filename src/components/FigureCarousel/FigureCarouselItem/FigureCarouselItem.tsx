@@ -1,10 +1,7 @@
-import {NavigationProp} from '@react-navigation/core/src/types';
-import {useNavigation} from '@react-navigation/native';
-import {Routes} from 'navigation';
+import {Routes, useAppNavigation} from 'navigation';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 import {getFigureById} from 'store';
-import {MainStackParams} from 'types';
 import {
   StyledImageWithPlaceholder,
   StyledContainer,
@@ -27,7 +24,7 @@ export const FigureCarouselItem = ({
   isSelected,
   id,
 }: FigureCarouselItemProps) => {
-  const {navigate} = useNavigation<NavigationProp<MainStackParams>>();
+  const {navigate} = useAppNavigation();
   const {set_img_url, name, set_url} = useSelector(getFigureById(id));
   const handlePress = useCallback(() => {
     onPress(id);

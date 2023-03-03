@@ -1,6 +1,9 @@
 import {FigureCarousel} from 'components/FigureCarousel/FigureCarousel';
+import {Routes} from 'navigation';
 import React, {useCallback, useEffect, useState} from 'react';
+import {NativeStackScreenProps} from 'react-native-screens/native-stack';
 import {fetchHarryPotterMiniFigs, useAppDispatch} from 'store';
+import {MainStackParams} from 'types';
 import {
   StyledContainer,
   StyledFigureCarouselWrapper,
@@ -12,7 +15,14 @@ import {
 
 const CAROUSEL_SIZE = 5;
 
-export const FigureCarouselScreen = () => {
+export type FigureCarouselScreenProps = NativeStackScreenProps<
+  MainStackParams,
+  Routes.FigureCarousel
+>;
+
+export const FigureCarouselScreen = ({
+  navigation: {navigate},
+}: FigureCarouselScreenProps) => {
   const [selectedFigureId, setSelectedFigureId] = useState<string | null>(null);
   const dispatch = useAppDispatch();
 
@@ -25,7 +35,11 @@ export const FigureCarouselScreen = () => {
   }, []);
 
   const onChooseFigurePress = useCallback(() => {
-    console.log(selectedFigureId);
+    if (!selectedFigureId) {
+      return;
+    }
+
+    navigate(Routes.ShippingForm, {figureId: selectedFigureId});
   }, [selectedFigureId]);
 
   return (

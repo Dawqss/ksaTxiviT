@@ -3,3 +3,5 @@ export * from './ImageWithPlaceholder/ImageWithPlaceholder';
 export * from './StyledText/StyledText';
 export * from './BackButton/BackButton';
 export * from './Button/Button';
+export * from './ShippingForm/ShippingForm';
+export * from './TextInput/TextInput';

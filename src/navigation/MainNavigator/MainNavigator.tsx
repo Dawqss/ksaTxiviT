@@ -1,7 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {BackButton} from 'components';
 import React from 'react';
-import {FigureCarouselScreen, WebViewScreen} from 'screens';
+import {FigureCarouselScreen, ShippingFormScreen, WebViewScreen} from 'screens';
 import {mainScreenOptions, MainStack, Routes} from '../constants';
 
 export const MainNavigator = () => {
@@ -20,6 +20,11 @@ export const MainNavigator = () => {
             headerLeft: () => <BackButton onPress={navigation.goBack} />,
             title: 'Details',
           })}
+        />
+        <MainStack.Screen
+          name={Routes.ShippingForm}
+          component={ShippingFormScreen}
+          options={mainScreenOptions}
         />
       </MainStack.Navigator>
     </NavigationContainer>

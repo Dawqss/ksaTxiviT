@@ -6,6 +6,7 @@ export const darkTheme: DefaultTheme = {
     darkBlue: '#1f2138',
     white: '#ffffff',
     grey: '#d3d3d3',
+    red: '#7A0012',
   },
   palette: {
     background: {
