@@ -18,7 +18,6 @@ export const TextInput = ({
   errorMessage = '',
   ...textInputProps
 }: TextInputProps) => {
-  console.log('errorMessage', errorMessage);
   return (
     <StyledContainer>
       <StyledLabel>{label}</StyledLabel>

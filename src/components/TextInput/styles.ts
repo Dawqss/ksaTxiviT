@@ -16,7 +16,7 @@ export const StyledTextInput = styled.TextInput.attrs(
 )`
   font-family: 'Changa';
   height: 42px;
-  padding: 8px 8px 7px 20px;
+  padding: 8px 8px 7px 16px;
   color: ${props => props.theme.baseColors.darkBlue};
   background-color: ${props => props.theme.baseColors.white};
   border-radius: 6px;

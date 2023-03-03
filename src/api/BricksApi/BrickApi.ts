@@ -1,6 +1,6 @@
 import {httpClient, endpoints} from 'api';
 import Config from 'react-native-config';
-import {LegoMiniFigsResponse} from 'types';
+import {FigurePartsResponse, LegoMiniFigsResponse} from 'types';
 
 export class BrickApi {
   static PAGE_SIZE = 400;
@@ -14,7 +14,7 @@ export class BrickApi {
     });
   }
 
-  static getPartsForMiniFigure(figureId: string) {
+  static getPartsForMiniFigure(figureId: string): Promise<FigurePartsResponse> {
     return httpClient.get(endpoints.partsForMinifig(figureId));
   }
 }

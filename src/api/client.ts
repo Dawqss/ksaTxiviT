@@ -1,5 +1,6 @@
-import axios from 'axios';
+import axios, {AxiosResponse} from 'axios';
 import Config from 'react-native-config';
+import {ErrorResponse} from 'types';
 
 export const httpClient = axios.create({
   baseURL: Config.API_URL,
@@ -13,10 +14,23 @@ httpClient.interceptors.request.use(config => {
   return config;
 });
 
-httpClient.interceptors.response.use(res => {
-  if (res.headers['content-type'] === 'text/html') {
-    throw new Error('UNEXPECTED_ERROR_MESSAGE');
-  }
+httpClient.interceptors.response.use(
+  res => {
+    if (res.headers['content-type'] === 'text/html') {
+      throw new Error('UNEXPECTED_ERROR_MESSAGE');
+    }
 
-  return res.data;
-});
+    return res.data;
+  },
+  (response: AxiosResponse): ErrorResponse => {
+    let data = response.request.response;
+    try {
+      data = JSON.parse(response.request.response);
+    } catch (__) {}
+
+    throw {
+      data,
+      message: response,
+    };
+  },
+);

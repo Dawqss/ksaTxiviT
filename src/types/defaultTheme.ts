@@ -5,6 +5,7 @@ export interface DefaultTheme {
     white: string;
     grey: string;
     red: string;
+    yellow: string;
   };
   palette: {
     background: {

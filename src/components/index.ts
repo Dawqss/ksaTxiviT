@@ -2,6 +2,8 @@ export * from './Providers/Providers';
 export * from './ImageWithPlaceholder/ImageWithPlaceholder';
 export * from './StyledText/StyledText';
 export * from './BackButton/BackButton';
+export * from './CloseButton/CloseButton';
 export * from './Button/Button';
 export * from './ShippingForm/ShippingForm';
 export * from './TextInput/TextInput';
+export * from './PartsList/PartsList';
