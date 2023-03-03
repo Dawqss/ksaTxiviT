@@ -14,9 +14,8 @@ const slice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(fetchPartsByFigureId.pending, state => ({
-        ...state,
-        error: null,
+      .addCase(fetchPartsByFigureId.pending, () => ({
+        ...initialState,
         isLoading: true,
       }))
       .addCase(
@@ -37,9 +36,9 @@ const slice = createSlice({
           };
         },
       )
-      .addCase(fetchPartsByFigureId.rejected, state => {
+      .addCase(fetchPartsByFigureId.rejected, () => {
         return {
-          ...state,
+          ...initialState,
           isLoading: false,
         };
       });
